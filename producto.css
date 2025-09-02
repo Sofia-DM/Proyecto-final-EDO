@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    min-width: 400px;
+}
+
+.header{
+    background-color:rgba(238, 215, 221, 0.986);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.header .nav-links li:hover,
+/**/.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    
+    margin-left: 20px;
+    font-weight: 700;
+    color: #050505;
+    padding: 9px 25px;
+    background:rgba(238, 215, 221, 0.986);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .nav-links a:hover{
+    background-color:rgba(238, 215, 221, 0.986);
+    color: #fffffe;
+    transform: scale(1.1);
+}
+
+.menu {
+    display:none;
+}
+.header .btn button,.header .menu button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #050505;
+    padding: 0px 0px;
+    background:rgba(238, 215, 221, 0.986);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,.header .menu button:hover{
+   background: rgba(238, 215, 221, 0.986);
+    transform: scale(1.1);
+}
+@media screen and (max-width: 800px){
+    .nav-links, .btn {
+        display: none;
+    }
+    .menu {
+        display: inherit;
+    }
+        /*el producto*/
+}
+h3.h3  /*titulo caja y posicion*/
+{   font-family: 'Times New Roman', Times, serif;
+    width: 50px;
+    height: 50px;
+    text-align:center;
+    margin:1em;
+    text-transform:capitalize;
+    font-size:1.7em;
+}
+.product-grid,.product-grid .product-image{  /*posicion*/
+    position:static;
+}
+.product-grid{    /*contenido del texto*/
+    font-family:Poppins,sans-serif;
+    text-align:center;
+    border-radius:5px;
+    overflow:hidden;
+    z-index:1;
+    transition:all .3s ease 0s
+}
+.product-grid p{  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+.product-grid .add-to-p{    /*notas del contenido*/
+    background-color:rgba(238, 215, 221, 0.986);
+    font-size:17px;
+    font-weight:700;
+}
+.product-grid:hover{   /*borde efecto*/
+    transition:all .3s ease 0s
+}
+.product-grid .product-image a{
+    width: 50%;
+}
+.product-grid .product-image img{ /*dimensiones imagenes*/
+    width:100%;
+    vertical-align: top;
+}
+.product-grid .imagen-1{  /*efecto imagen 1*/
+    opacity:1;
+    transition:all .5s ease-out 0s
+}
+.product-grid:hover .imagen-1{
+    opacity:0
+}
+.product-grid .imagen-2{  /*efecto imagen 2*/
+    position:absolute;
+    top:0;left:0;
+    opacity:0;
+    transition:all .5s ease-out 0s
+}
+.product-grid:hover .imagen-2{
+    opacity:1
+}
+.product-grid .product-discount-label,.product-grid .product-new-label{ /*cartel descuento*/
+    color:#fff;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:45px;
+    height:45px;
+    width:45px;
+    border-radius:50%;
+    position:absolute;
+    left:10px;
+    top:15px;
+    transition:all .3s
+}
+.product-grid .product-discount-label{ /*aguste cartel descuento*/
+    left:auto;
+    right:10px;
+    background-color:#d7292a
+}
+.product-grid:hover .product-new-label{
+    opacity:0
+}
+.product-grid .product-content{
+    padding:25px
+}
+.product-grid .title{  /*Nombre titulo*/
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:400;
+    text-transform:capitalize;
+    margin:0 0 7px;
+    transition:all .3s ease 0s
+}
+.product-grid .title a{
+    color:#222               
+}
+.product-grid .title a:hover{
+    color:#16a085
+}
+.product-grid .price{ /*precio actual (poner distancia con los)*/ 
+    color:#16a085;
+    font-size:17px;
+    font-weight:700;
+    margin:0 2px 15px 0;
+    display:block
+}
+.product-grid .price span{ /*Precio antiguo*/
+    color:#909090;
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:0;
+    text-decoration:line-through;
+    text-align:left;
+    vertical-align:middle;
+    display:inline-block
+}
+.product-grid .add-to-cart{  /*borde del Boton + efecto*/
+    border:1px solid #e5e5e5;
+    display:inline-block;
+    padding:10px 20px;
+    color:#888;
+    font-weight:600;
+    font-size:14px;
+    border-radius:4px;
+    transition:all .3s
+}
+.product-grid:hover .add-to-cart{ /*Boton comprar*/
+    border:1px solid transparent;
+    background:#111111;
+    color:#fff
+}
+
+
